@@ -1,0 +1,25 @@
+<app-admin-content></app-admin-content>
+
+<div class="row">
+  <div class="col-md-6" *ngFor="let user of users">
+    <div class="patient-card">
+      <div class="card">
+        <div class="panel-body">
+          <div class="bio-chart"></div>
+          <div class="bio-desk">
+            <h4 class="purple"></h4>
+            <p>Çalışan Adı: {{ user.userName }}</p>
+            <p>Çalışan FullAdı: {{ user.fullName }}</p>
+            <p>Çalışan Maili: {{ user.email }}</p>
+            <p>Çalışan Kategorisi: {{ user.categoryName }}</p>
+
+          </div>
+        </div>
+        <div class="button-container">
+          <button (click)="deleteEmployee(user.id)">Sil</button> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
